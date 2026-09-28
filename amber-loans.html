@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Amber Loans – Free loan consultation for every need</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffdf9;--surface:#fff;--soft:#fff4dc;--ink:#12263f;--muted:#5b6b7f;--line:#e8e1d2;--amber:#f5a524;--amber-d:#c77c02;--navy:#12263f;--on-navy:#fff;--ok:#1b8a4b;--err:#c0392b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0d1a2b;--surface:#14263d;--soft:#1b2f49;--ink:#f2f5f9;--muted:#a6b4c6;--line:#28405c;--navy:#081321;--amber-d:#f5a524}}
+:root[data-theme="dark"]{--bg:#0d1a2b;--surface:#14263d;--soft:#1b2f49;--ink:#f2f5f9;--muted:#a6b4c6;--line:#28405c;--navy:#081321;--amber-d:#f5a524}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;line-height:1.6;font-size:16px}
+h1,h2,h3{font-family:"Bricolage Grotesque","DM Sans",system-ui,sans-serif;line-height:1.15;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{display:flex;align-items:center;gap:10px;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;text-decoration:none}
+.logo i{width:30px;height:30px;border-radius:50%;background:var(--amber);display:grid;place-items:center;color:var(--navy);font-style:normal;font-size:16px}
+.nav nav{display:flex;gap:22px;align-items:center}
+.nav nav a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+.nav nav a:hover{color:var(--ink)}
+.btn{display:inline-block;border:0;cursor:pointer;background:var(--amber);color:#12263f;font:700 16px "DM Sans",sans-serif;padding:13px 22px;border-radius:10px;text-decoration:none;text-align:center}
+.btn:hover{background:#ffb83f}
+.btn:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible,a:focus-visible{outline:3px solid var(--amber-d);outline-offset:2px}
+.nav .btn{padding:9px 16px;font-size:14px;color:#12263f!important}
+@media(max-width:720px){.nav nav a:not(.btn){display:none}}
+.hero{padding:44px 0 56px;background:linear-gradient(180deg,var(--soft),var(--bg))}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+@media(max-width:900px){.hero .wrap{grid-template-columns:1fr}}
+.hero h1{font-size:clamp(34px,5.4vw,56px);font-weight:800}
+.hero h1 span{display:block;color:var(--amber-d)}
+.hero p.lead{font-size:18px;color:var(--muted);max-width:520px;margin:18px 0 22px}
+.ticks{list-style:none;padding:0;margin:0 0 6px;display:grid;gap:10px}
+.ticks li{display:flex;gap:10px;align-items:flex-start;font-weight:500}
+.ticks svg{flex:none;margin-top:3px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(18,38,63,.10)}
+.card h2{font-size:24px}
+.card .sub{color:var(--muted);font-size:14px;margin:6px 0 18px}
+label{display:block;font-weight:700;font-size:14px;margin:14px 0 6px}
+input,select{width:100%;font:500 16px "DM Sans",sans-serif;padding:12px 14px;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);min-height:48px}
+input:focus,select:focus{border-color:var(--amber-d)}
+.row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:420px){.row{grid-template-columns:1fr}}
+.phone{display:flex;border:1.5px solid var(--line);border-radius:10px;background:var(--bg);overflow:hidden}
+.phone:focus-within{border-color:var(--amber-d)}
+.phone .cc{display:flex;align-items:center;gap:8px;padding:0 12px;border-right:1.5px solid var(--line);font-weight:700;white-space:nowrap;background:var(--soft)}
+.phone input{border:0;border-radius:0;background:transparent}
+.rupee{position:relative}
+.rupee b{position:absolute;left:14px;top:50%;transform:translateY(-50%);font-weight:700}
+.rupee input{padding-left:32px}
+.words{font-size:13px;color:var(--muted);margin-top:4px;min-height:20px}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.chip{border:1.5px solid var(--line);background:transparent;color:var(--ink);border-radius:999px;padding:6px 12px;font:500 13px "DM Sans",sans-serif;cursor:pointer}
+.chip:hover,.chip[aria-pressed="true"]{border-color:var(--amber-d);background:var(--soft)}
+.consent{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:13px;color:var(--muted);margin-top:16px}
+.consent input{width:20px;min-height:20px;margin-top:2px;flex:none}
+.err{color:var(--err);font-size:13px;margin-top:4px;display:none}
+.invalid .err{display:block}
+.invalid input,.invalid select,.invalid .phone{border-color:var(--err)}
+.submit{width:100%;margin-top:18px;padding:15px}
+.fine{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+.done{display:none;text-align:center;padding:16px 0}
+.done .tick{width:56px;height:56px;border-radius:50%;background:var(--ok);display:grid;place-items:center;margin:0 auto 14px}
+.done h3{font-size:24px}
+.done p{color:var(--muted)}
+.trust{background:var(--navy);color:var(--on-navy)}
+.trust .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-top:22px;padding-bottom:22px}
+.trust div{font-size:14px;color:#c9d4e2}
+.trust strong{display:block;color:#fff;font-size:16px}
+@media(max-width:800px){.trust .wrap{grid-template-columns:1fr 1fr}}
+section.s{padding:64px 0}
+.head{max-width:620px;margin-bottom:30px}
+.head h2{font-size:clamp(28px,4vw,40px)}
+.head p{color:var(--muted);margin:10px 0 0}
+.tabs{display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap}
+.tab{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:8px 18px;font:700 14px "DM Sans",sans-serif;cursor:pointer}
+.tab[aria-selected="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:16px}
+.loan{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:10px}
+.loan .ic{width:44px;height:44px;border-radius:12px;background:var(--soft);display:grid;place-items:center;font-size:22px}
+.loan h3{font-size:19px}
+.loan p{margin:0;color:var(--muted);font-size:14px;flex:1}
+.tag{align-self:flex-start;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}
+.tag.sec{background:var(--soft);color:var(--amber-d);border-color:transparent}
+.loan a{font-weight:700;color:var(--amber-d);text-decoration:none;font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:s}
+@media(max-width:800px){.steps{grid-template-columns:1fr}}
+.step{border-left:3px solid var(--amber);padding:4px 0 4px 18px}
+.step h3{font-size:20px;margin-bottom:6px}
+.step p{margin:0;color:var(--muted)}
+.why{background:var(--soft)}
+.why .grid{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
+.why .loan{background:var(--surface)}
+details{border-bottom:1px solid var(--line);padding:16px 0}
+summary{font-weight:700;cursor:pointer;font-size:17px}
+details p{color:var(--muted);margin:10px 0 0;max-width:720px}
+footer{background:var(--navy);color:#c9d4e2;padding:40px 0 30px;font-size:14px}
+footer .logo{color:#fff;margin-bottom:12px}
+footer p{max-width:760px;margin:8px 0}
+.cta{text-align:center;padding:56px 0}
+.cta h2{font-size:clamp(26px,4vw,38px);margin-bottom:16px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+<a class="logo" href="#top"><i aria-hidden="true">₹</i>Amber Loans</a>
+<nav><a href="#loans">Loans</a><a href="#how">How it works</a><a href="#faq">FAQ</a><a class="btn" href="#apply">Free consultation</a></nav>
+</div></header>
+
+<main id="top">
+<section class="hero"><div class="wrap">
+<div>
+<h1>Find the right loan, at market-best rates.<span>Free call. No fees. No charges.</span></h1>
+<p class="lead">Home, car, business or personal. Tell us what you need and see in about 5 minutes if you qualify.</p>
+<ul class="ticks">
+<li><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1b8a4b"/><path d="M5.5 10.5l3 3 6-6.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Free consulting call, zero fees</li>
+<li><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1b8a4b"/><path d="M5.5 10.5l3 3 6-6.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Secured and unsecured loans</li>
+<li><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1b8a4b"/><path d="M5.5 10.5l3 3 6-6.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>We follow RBI guidelines</li>
+<li><svg width="20" height="20" viewBox="0 0 20 20"><circle cx="10" cy="10" r="10" fill="#1b8a4b"/><path d="M5.5 10.5l3 3 6-6.5" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>Updates sent to your email and by text</li>
+</ul>
+</div>
+
+<div class="card" id="apply">
+<form id="f" novalidate>
+<h2>Check if you qualify</h2>
+<p class="sub">Takes under 5 minutes. Free, with no obligation.</p>
+
+<div class="fld"><label for="name">Full name</label><input id="name" autocomplete="name" placeholder="As on your PAN card" required><div class="err">Enter your full name.</div></div>
+
+<div class="fld"><label for="phone">Mobile number</label>
+<div class="phone"><span class="cc"><svg width="24" height="16" viewBox="0 0 24 16" aria-hidden="true"><rect width="24" height="16" rx="2" fill="#fff"/><rect width="24" height="5.4" fill="#FF9933"/><rect y="10.6" width="24" height="5.4" fill="#138808"/><circle cx="12" cy="8" r="2.2" fill="none" stroke="#000080" stroke-width=".8"/><circle cx="12" cy="8" r=".4" fill="#000080"/></svg>+91</span>
+<input id="phone" type="tel" inputmode="numeric" autocomplete="tel-national" maxlength="10" placeholder="98765 43210" required></div>
+<div class="err">Enter a valid 10-digit mobile number starting with 6, 7, 8 or 9.</div></div>
+
+<div class="fld"><label for="email">Email</label><input id="email" type="email" autocomplete="email" placeholder="you@example.com" required><div class="err">Enter a valid email address.</div></div>
+
+<div class="fld"><label for="type">Type of loan</label>
+<select id="type" required>
+<option value="">Select a loan</option>
+<optgroup label="Secured loans">
+<option>Home Loan</option><option>Loan Against Property</option><option>Car Loan</option><option>Gold Loan</option><option>Secured Business Loan</option>
+</optgroup>
+<optgroup label="Unsecured loans">
+<option>Personal Loan</option><option>Unsecured Business Loan</option><option>Education Loan</option><option>Credit Card Loan</option>
+</optgroup>
+</select><div class="err">Choose the loan you need.</div></div>
+
+<div class="row">
+<div class="fld"><label for="amt">Loan amount</label><div class="rupee"><b>₹</b><input id="amt" inputmode="numeric" placeholder="5,00,000" required></div><div class="err">Enter an amount of at least ₹10,000.</div></div>
+<div class="fld"><label for="yrs">Repayment period</label>
+<select id="yrs" required><option value="">Select years</option></select><div class="err">Choose a period.</div></div>
+</div>
+<div class="words" id="words" aria-live="polite"></div>
+<div class="chips" id="chips"></div>
+
+<label class="consent"><input type="checkbox" id="ok" required><span>I agree to be contacted by Amber Loans on call, SMS and email about my loan enquiry.</span></label>
+<div class="err" id="okerr" style="display:none">Please tick to allow us to contact you.</div>
+
+<button class="btn submit" type="submit">Get my free consultation</button>
+<p class="fine">Your details are used only to process your enquiry.</p>
+</form>
+
+<div class="done" id="done" role="status">
+<div class="tick"><svg width="28" height="28" viewBox="0 0 20 20"><path d="M4.5 10.5l3.5 3.5 7.5-8" stroke="#fff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+<h3>Thanks, <span id="dn"></span>!</h3>
+<p id="dm"></p>
+<p>We'll confirm by email and text, and an advisor will call you for your free consultation.</p>
+<button class="btn" id="again" type="button">Submit another enquiry</button>
+</div>
+</div>
+</div></section>
+
+<div class="trust"><div class="wrap">
+<div><strong>₹0 fees</strong>Consultation is completely free</div>
+<div><strong>5 minutes</strong>To see if you qualify</div>
+<div><strong>RBI guidelines</strong>Followed in everything we do</div>
+<div><strong>Market rates</strong>Minimum rates as per the market</div>
+</div></div>
+
+<section class="s" id="loans"><div class="wrap">
+<div class="head"><h2>Loans for every need</h2><p>Pick a category to see what we offer. Not sure which one fits? Book the free call and we'll help you choose.</p></div>
+<div class="tabs" role="tablist" id="tabs">
+<button class="tab" role="tab" aria-selected="true" data-f="all">All loans</button>
+<button class="tab" role="tab" aria-selected="false" data-f="sec">Secured</button>
+<button class="tab" role="tab" aria-selected="false" data-f="uns">Unsecured</button>
+</div>
+<div class="grid" id="grid"></div>
+</div></section>
+
+<section class="s" id="how" style="padding-top:0"><div class="wrap">
+<div class="head"><h2>Three simple steps</h2></div>
+<div class="steps">
+<div class="step"><h3>Share your needs</h3><p>Fill the short form with the loan type, amount and years. It takes about a minute.</p></div>
+<div class="step"><h3>See if you qualify</h3><p>Know within 5 minutes. Results are sent to your email and by text.</p></div>
+<div class="step"><h3>Get your loan</h3><p>Choose the offer that suits you and repay with hassle-free payments.</p></div>
+</div>
+</div></section>
+
+<section class="s why"><div class="wrap">
+<div class="head"><h2>Why choose Amber Loans</h2></div>
+<div class="grid">
+<div class="loan"><div class="ic">💸</div><h3>No fees, no charges</h3><p>Our consulting call is free. No hidden costs to talk to us.</p></div>
+<div class="loan"><div class="ic">📉</div><h3>Market-best rates</h3><p>We work to get you the minimum interest rate available in the market for your profile.</p></div>
+<div class="loan"><div class="ic">🛡️</div><h3>RBI-guided process</h3><p>We follow RBI guidelines so your loan journey stays transparent and fair.</p></div>
+<div class="loan"><div class="ic">📲</div><h3>Everything in writing</h3><p>Updates go to your email and phone by text, so you always have a record.</p></div>
+<div class="loan"><div class="ic">⚡</div><h3>Quick eligibility check</h3><p>Find out if you qualify in up to 5 minutes.</p></div>
+<div class="loan"><div class="ic">🤝</div><h3>Hassle-free payments</h3><p>Simple repayment options that fit your monthly budget.</p></div>
+</div></div></section>
+
+<section class="s" id="faq"><div class="wrap" style="max-width:820px">
+<div class="head"><h2>Common questions</h2></div>
+<details><summary>Is the consultation really free?</summary><p>Yes. The consulting call has no fees and no charges, and there is no obligation to take a loan.</p></details>
+<details><summary>What is the difference between secured and unsecured loans?</summary><p>Secured loans, like home or car loans, are backed by an asset and usually have lower rates. Unsecured loans, like personal loans, need no collateral but may cost more.</p></details>
+<details><summary>How will I know if I qualify?</summary><p>Submit the form and you'll know in up to 5 minutes. We send the result to your email and by text.</p></details>
+<details><summary>What documents might I need?</summary><p>Usually identity proof, address proof, income proof and bank statements. Requirements differ by loan and lender, and your advisor will tell you exactly what's needed.</p></details>
+</div></section>
+
+<section class="cta" style="background:var(--soft)"><div class="wrap">
+<h2>Ready to see if you qualify?</h2>
+<a class="btn" href="#apply">Get my free consultation</a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+<div class="logo"><i aria-hidden="true">₹</i>Amber Loans</div>
+<p>Amber Loans follows RBI guidelines. Interest rates, loan approval, amounts and tenure depend on your credit profile, documents and the lending partner's policies. Rates are indicative and as per the market.</p>
+<p>© 2026 Amber Loans. All rights reserved.</p>
+</div></footer>
+
+<script>
+var LOANS=[
+["🏠","Home Loan","Buy, build or renovate your home with long repayment periods.","sec"],
+["🏢","Loan Against Property","Unlock funds from your home or commercial property.","sec"],
+["🚗","Car Loan","Drive home a new or used car with easy monthly payments.","sec"],
+["🪙","Gold Loan","Quick funds against your gold, with a simple process.","sec"],
+["🏭","Secured Business Loan","Larger funding for your business, backed by an asset.","sec"],
+["👤","Personal Loan","For weddings, travel, medical needs or anything else. No collateral.","uns"],
+["💼","Unsecured Business Loan","Working capital and growth funds without pledging assets.","uns"],
+["🎓","Education Loan","Fund studies in India or abroad.","uns"],
+["💳","Credit Card Loan","Convert big purchases into easy instalments.","uns"]];
+var g=document.getElementById("grid");
+function draw(f){g.innerHTML="";LOANS.forEach(function(l){if(f!=="all"&&l[3]!==f)return;
+var d=document.createElement("div");d.className="loan";
+d.innerHTML='<div class="ic">'+l[0]+'</div><span class="tag '+l[3]+'">'+(l[3]==="sec"?"Secured":"Unsecured")+'</span><h3>'+l[1]+'</h3><p>'+l[2]+'</p><a href="#apply" data-l="'+l[1]+'">Apply for this loan</a>';
+g.appendChild(d);});}
+draw("all");
+document.getElementById("tabs").addEventListener("click",function(e){var b=e.target.closest(".tab");if(!b)return;
+document.querySelectorAll(".tab").forEach(function(t){t.setAttribute("aria-selected",t===b)});draw(b.dataset.f);});
+g.addEventListener("click",function(e){var a=e.target.closest("a[data-l]");if(a)document.getElementById("type").value=a.dataset.l;});
+
+var yrs=document.getElementById("yrs");
+for(var i=1;i<=30;i++){var o=document.createElement("option");o.value=i;o.textContent=i+(i===1?" year":" years");yrs.appendChild(o);}
+
+var amt=document.getElementById("amt"),words=document.getElementById("words");
+function inr(n){return Number(n).toLocaleString("en-IN");}
+function toWords(n){if(n>=1e7)return "₹"+(n/1e7).toFixed(2).replace(/\.?0+$/,"")+" crore";if(n>=1e5)return "₹"+(n/1e5).toFixed(2).replace(/\.?0+$/,"")+" lakh";return n?"₹"+inr(n):"";}
+amt.addEventListener("input",function(){var v=amt.value.replace(/\D/g,"").slice(0,10);amt.value=v?inr(v):"";words.textContent=toWords(+v);});
+var chips=document.getElementById("chips");
+[[100000,"₹1 lakh"],[500000,"₹5 lakh"],[1000000,"₹10 lakh"],[5000000,"₹50 lakh"]].forEach(function(c){
+var b=document.createElement("button");b.type="button";b.className="chip";b.textContent=c[1];
+b.onclick=function(){amt.value=inr(c[0]);words.textContent=toWords(c[0]);};chips.appendChild(b);});
+document.getElementById("phone").addEventListener("input",function(e){e.target.value=e.target.value.replace(/\D/g,"").slice(0,10);});
+
+var f=document.getElementById("f");
+function bad(el,cond){var w=el.closest(".fld");w.classList.toggle("invalid",cond);return cond;}
+f.addEventListener("submit",function(e){e.preventDefault();
+var n=document.getElementById("name"),p=document.getElementById("phone"),m=document.getElementById("email"),t=document.getElementById("type"),ay=yrs,ok=document.getElementById("ok");
+var raw=+amt.value.replace(/\D/g,"");
+var errs=[bad(n,n.value.trim().length<2),bad(p,!/^[6-9]\d{9}$/.test(p.value)),bad(m,!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value)),bad(t,!t.value),bad(amt,raw<10000),bad(ay,!ay.value)];
+var okBad=!ok.checked;document.getElementById("okerr").style.display=okBad?"block":"none";
+if(errs.some(Boolean)||okBad){var first=f.querySelector(".invalid input,.invalid select");if(first)first.focus();return;}
+document.getElementById("dn").textContent=n.value.trim().split(" ")[0];
+document.getElementById("dm").textContent=t.value+" of ₹"+inr(raw)+" for "+ay.value+(ay.value==="1"?" year":" years")+".";
+f.style.display="none";document.getElementById("done").style.display="block";
+});
+document.getElementById("again").onclick=function(){f.reset();words.textContent="";f.style.display="block";document.getElementById("done").style.display="none";};
+</script>
+</body>
+</html>
